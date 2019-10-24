@@ -46,7 +46,7 @@
           <descriptorRefs>
             <descriptorRef>jar-with-dependencies</descriptorRef>
           </descriptorRefs>
-          <!-- MainClass in manifest make a executable jar -->
+          <!-- MainClass in manifest make an executable jar -->
           <archive>
             <manifest>
                  <mainClass>fr.ut2j.m1ice.ci.tpmaven.JXBusyLabelTest</mainClass>
@@ -93,6 +93,7 @@
       </plugin>      
     </plugins>
   </reporting>
+  
 
   <dependencies>
     <!-- https://mvnrepository.com/artifact/junit/junit -->

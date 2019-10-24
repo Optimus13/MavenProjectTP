@@ -13,22 +13,39 @@ import javax.swing.JPanel;
 import org.jdesktop.swingx.JXBusyLabel;
 
 
-/**
- * 
+/** 
  * @author Thomas COLETTE.
- *
  */
 
 /**
- * JXBusyLabelTest - Generates a window with a customizable Busy Label.
+ * JXBusyLabelTest - Génère une fenêtre contenant un Busy Label customisable grâce à des combobox
+ * et des boutons.
  */
 public class JXBusyLabelTest extends JFrame implements ActionListener {
 
+	/**
+	 * Le JXBusyLabel de l'application.
+	 */
     JXBusyLabel bLabel1;
+    
+    /**
+     * Les deux JComboBox permettant de changer la couleur de background et foreground.
+     */
 	JComboBox comboBackground, comboForeground;
+	
+	/**
+	 * Les deux JButton permettant de démarrer et de stopper l'animation du JXBusyLabel.
+	 */
 	JButton btnStart, btnStop;
+	
+	/**
+	 * Le tableau de couleurs qui sont utilisées par les JComboBox.
+	 */
 	Color[] colors = {Color.BLACK, Color.WHITE, Color.RED, Color.BLUE, Color.GREEN, Color.GRAY, Color.YELLOW};
 
+	/**
+	 * Constructeur de la classe JXBusyLabelTest.
+	 */
 	public JXBusyLabelTest() {
 		bLabel1 = new JXBusyLabel(new Dimension(60, 60));
 		bLabel1.setBusy(true);
@@ -63,9 +80,10 @@ public class JXBusyLabelTest extends JFrame implements ActionListener {
 	}
 
 	/**
-	 * @param e ActionEvent sent by the user
+	 * @param e L'ActionEvent envoyé par les combobox et les boutons
 	 * 
-	 * This method changes the components' behaviours depending on the user actions.
+	 * Cette méthode traite les événements d'action sur les comboboxx et les boutons et change le comportement
+	 * du busylabel en fonction.
 	 */
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == comboBackground) {
@@ -79,6 +97,11 @@ public class JXBusyLabelTest extends JFrame implements ActionListener {
 		}
 	}
 
+	/**
+	 * Fonction principale de l'application.
+	 * 
+	 * @param args Les arguments de la fonction main.
+	 */
 	public static void main(String[] args) {
 		new JXBusyLabelTest();
 	}
