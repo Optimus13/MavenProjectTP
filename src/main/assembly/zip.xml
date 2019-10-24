@@ -9,21 +9,8 @@
     </formats>
     <fileSets>
         <fileSet>
+			<outputDirectory>./</outputDirectory>
             <directory>${project.basedir}</directory>
         </fileSet>
     </fileSets>
-    <files>
-        <file>
-            <source> ${project.build.directory}/${project.artifactId}-${project.version}-jar-with-dependencies.jar</source>
-            <outputDirectory>/</outputDirectory>
-        </file>
-    </files>
-    <dependencySets>
-        <dependencySet>
-            <outputDirectory>lib</outputDirectory>
-            <excludes>
-                <exclude>${project.groupId}:${project.artifactId}:jar:*</exclude>
-            </excludes>
-        </dependencySet>
-    </dependencySets>
 </assembly>
