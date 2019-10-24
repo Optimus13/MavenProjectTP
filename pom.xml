@@ -60,22 +60,24 @@
   </build>
   
   <reporting>
-    <plugins>
+    <plugins>    
       <plugin>
 	    <groupId>org.apache.maven.plugins</groupId>
 	    <artifactId>maven-javadoc-plugin</artifactId>
 	    <version>3.1.1</version>
       </plugin>
+      
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
         <version>3.1.0</version>
       </plugin>
+      
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>cobertura-maven-plugin</artifactId>
         <version>2.7</version>
-      </plugin>
+      </plugin>      
     </plugins>
   </reporting>
 
@@ -87,7 +89,6 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-
     
     <!-- https://mvnrepository.com/artifact/org.swinglabs/swingx -->
 	<dependency>
@@ -95,21 +96,31 @@
 	  <artifactId>swingx</artifactId>
 	  <version>1.6.1</version>
 	</dependency>
+	
 	<dependency>
 		<groupId>org.apache.maven.plugins</groupId>
 		<artifactId>maven-compiler-plugin</artifactId>
 		<version>3.8.1</version>
 	</dependency>
+	
 	<dependency>
 		<groupId>org.apache.maven.plugins</groupId>
 		<artifactId>maven-javadoc-plugin</artifactId>
 		<version>3.1.1</version>
 	</dependency>
+	
+	<dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <version>3.0.0-M3</version>
+    </dependency>
+	
 	<dependency>
       <groupId>commons-lang</groupId>
       <artifactId>commons-lang</artifactId>
       <version>2.1</version>
     </dependency>
+    
     <dependency>
       <groupId>org.codehaus.plexus</groupId>
       <artifactId>plexus-utils</artifactId>
